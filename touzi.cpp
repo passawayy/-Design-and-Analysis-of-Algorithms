@@ -13,26 +13,23 @@ int main()
 	{
 		rep(j,1,m) cin>>a[i][j];
 	}
-//	rep(i,1,n)
-//	{
-//		rep(j,1,m) cout<<a[i][j]<<" ";
-//		cout<<endl;
-//	}
-	rep(i,1,n)
+    memset(dp, 0, sizeof dp);
+    rep(i,1,n)
 	{
 		rep(j,1,m)
 		{
-			rep(k,a[i][j],w)
-			{
+            dep(k,w,i)
+            {
 				dp[k]=max(dp[k],dp[k-i]+a[i][j]);
 			}
 		}
 	}
-	cout<<dp[w]<<endl;
+   // rep(i, 1, n) cout << dp[i] << endl;
+    cout<<dp[w]<<endl;
 	return 0;
 }
 /*
-3 4 5
+5 4 5
 11 0 2 20
 12 5 10 21
 13 10 30 22
