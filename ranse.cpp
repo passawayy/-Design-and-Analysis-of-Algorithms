@@ -87,7 +87,9 @@ void run()
       add(y, x);
    }
    dfs(1);
-   cout << "Total :" << ans << '\n';
+	if(ans>0)
+ 	  cout << "Total :" << ans << '\n';
+	else cout<<"NO\n";
 }
 
 int main()
@@ -98,5 +100,14 @@ int main()
 /* 
 start time:
 over time:
+5 1 8
+1 3
+1 2
+1 4
+2 3
+2 4
+2 5
+3 4
+4 5
 */
 
